@@ -68,7 +68,7 @@ export default class Presentation extends React.Component {
             Baseline Accessibility
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={5} fit>
-            A crash course to understanding and wielding A11Y
+            A crash course to understanding and wielding A11Y.
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[1]}>
@@ -405,7 +405,7 @@ export default class Presentation extends React.Component {
           <Image src={images.gospelwareHeaders} align="center"></Image>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[45]}>
+        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[47]}>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Hidden Descriptions
           </Heading>
@@ -413,16 +413,16 @@ export default class Presentation extends React.Component {
             Providing text context lost with the UI
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[46]}>
+        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[48]}>
           {/* Provide NCFE Example */}
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[47]}>
+        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[49]}>
           <CodePane textSize=".6em">
             {codeExamples.hiddenDescriptions[0]}
           </CodePane>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[45]}>
+        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[50]}>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Empty States
           </Heading>
@@ -430,14 +430,14 @@ export default class Presentation extends React.Component {
             Providing information when no data is available
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="lightYellow" notes={slideNotes[47]}>
+        <Slide transition={["slide"]} bgColor="lightYellow" notes={slideNotes[51]}>
           <Image src={images.outlookEmptyState} width="300px"></Image>
           <BlockQuote textAlign="center" textColor="tertiary" textSize=".75em">
             <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">Nice use of an empty state. <a href="https://twitter.com/hashtag/ux?src=hash">#ux</a>  <a href="https://twitter.com/hashtag/inboxzero?src=hash">#inboxzero</a> <a href="https://t.co/pMKF0IMoE0">pic.twitter.com/pMKF0IMoE0</a></p>&mdash; Simon Latham (@Slath) <a href="https://twitter.com/Slath/status/672866265699106816">4 December 2015</a></blockquote>
           </BlockQuote>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[45]}>
+        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[52]}>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             (and finally) Styles
           </Heading>
@@ -445,24 +445,24 @@ export default class Presentation extends React.Component {
             Improve accessibility with CSS
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[47]}>
+        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[53]}>
           <CodePane textSize=".6em">
             {codeExamples.styles[0]}
           </CodePane>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[47]}>
+        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[54]}>
           <CodePane textSize=".6em">
             {codeExamples.styles[1]}
           </CodePane>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[47]}>
+        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[55]}>
           <CodePane textSize=".6em">
             {codeExamples.styles[2]}
           </CodePane>
           <Image margin="25px 0 0" src={images.focusWithinExample} width="600px" align="center"></Image>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[45]}>
+        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[56]}>
           <Heading size={1} caps lineHeight={1} textColor="secondary">
             Conclusion
           </Heading>
@@ -482,7 +482,7 @@ export default class Presentation extends React.Component {
             </Text>
           </Appear>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[45]}>
+        <Slide transition={["slide"]} bgColor="primary" notes={slideNotes[57]}>
           <Text margin="10px 0 0" textColor="tertiary" size={5}>
             Accessibility <em>is</em> important
           </Text>
