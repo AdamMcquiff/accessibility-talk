@@ -43,11 +43,11 @@ export default [
    <p>
     You could argue that if you don’t cater to those with disabilities, then you flat out refusing them use of your application.
    </p>
-  `,
-  `<p>
+   <p>
     So, is it difficult? I think it is. But why?
    </p>
-   <p>
+  `,
+  `<p>
     I believe there are there two main factors accessibility 'hurdles'
    </p>
    <p>
@@ -69,11 +69,16 @@ export default [
     There's a pretty useful, novel website to help with gain empathy called EmpathyPrompts.net.
    </p>
    <p>
-    As a developer, one of the main disabilities we need to accommodate is visual impairment.
-    Visually impaired users navigate websites using screen readers, which are operated using a keyboard.
+    Although you should consider all aspects of accessibility, as a developer, one of the main disabilities
+    we need to accommodate is visual impairment.
    </p>
   `,
   `<p>
+    Visually impaired users navigate websites using screen readers, which are operated using a keyboard.
+   </p>
+   <p>
+    There are different Screen Readers on different platforms &lt;refer to slide list&gt;
+   <p>
     You need to ensure that people who can barely see, or cannot see at all, can easily navigate your application,
     find all the information they need, and interact with it in the exact same fashion as any other user.
    </p>
@@ -114,8 +119,10 @@ export default [
    `,
   `<p>
     WAI-ARIA is an acronym for Web Accessibility Initiative - Accessible Rich Internet Applications,
-    and it’s an excellent tool for giving markup a more rich, semantic meaning.
-    ARIA offers a host of attributes that you can use within HTML.
+    and it’s an excellent specification for giving markup a more rich, semantic meaning.
+   <p>
+   </p>
+    ARIA offers a host of widely supported attributes that you can use within HTML.
    </p>
   `,
   `<p>
@@ -124,6 +131,9 @@ export default [
    </p>
    <p>
     Alternatively, you can use aria-labelledby to give the element another element’s value.
+   </p>
+   <p>
+    Note that these ARIA attributes, and any other ARIA attributes, will have no effect on the UI.
    </p>`,
   `<p>
     With Android, the approach is similar. You can use android:contentDescription in the same way as aria-label.
@@ -302,7 +312,12 @@ export default [
     this context can be lost when the information is delivered as text via a screen reader.
    </p>`,
   `<p>
-    FOR EXAMPLE TODO
+    Here, we have a few bits of information. It's clear with the UI that this information correlates to the course,
+    but it might not be as obvious to the screen reader.
+   </p>
+   <p>
+    To combat this, I've added some hidden spans with additional information to provide context for screen reader
+    users
    </p>`,
   `<p>
     Descriptive text exclusive to a screen reader can be wrapped in a span and hidden
@@ -330,7 +345,8 @@ export default [
     to the user that the element is current clickable. This can be achieved using the CSS pseudo hover class.
    </p>
    <p>
-    The hover pseudo class, however, does not work for elements that have been selected via a keyboard.
+    The hover pseudo class, however, does not apply styles when the element has been selected via a keyboard,
+    using the 'tab' key, which users who do not, or cannot, use a mouse often do.
    </p>
    <p>
     That means that users who do not, or cannot, use a mouse or touch device will not

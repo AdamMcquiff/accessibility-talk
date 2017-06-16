@@ -41,12 +41,22 @@ const images = {
   generalElectionResults: require("../assets/nationwide-results-at-a-glance.png"),
   gospelwareHeaders: require("../assets/gospelware-headers.jpg"),
   outlookEmptyState: require("../assets/outlook-empty-state.png"),
-  focusWithinExample: require("../assets/focus-within-example.png")
+  focusWithinExample: require("../assets/focus-within-example.png"),
+  formFieldWithPlaceholder: require("../assets/form-field-placeholder.png"),
+  formFieldWithLabel: require("../assets/form-field-label.png"),
+  buttonHover: require("../assets/button-hover.png"),
+  buttonFocusNoStyle: require("../assets/button-focus-no-style.png"),
+  buttonFocusWithStyle: require("../assets/button-focus-with-styles.png"),
+  hiddenInfoCode: require("../assets/hidden-info-code.png"),
+  hiddenInfoUI: require("../assets/hidden-info-ui.png")
 };
 
 preloader(images);
 
 const theme = createTheme({
+  white: "#fff",
+  approved: "#00c853",
+  bad: "#dd2c00",
   primary: "#ffeb3b",
   secondary: "#263238",
   tertiary: "#000a12",
@@ -198,16 +208,16 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[14]}>
-          <CodePane textSize=".8em">
+          <CodePane textSize=".8em" margin="0 0 25px 0">
             {codeExamples.forms[0]}
           </CodePane>
-          {/* Add img? */}
+          <Image src={images.formFieldWithPlaceholder} width="400px"></Image>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[15]}>
-          <CodePane textSize=".8em">
+          <CodePane textSize=".8em" margin="0 0 25px 0">
             {codeExamples.forms[1]}
           </CodePane>
-          {/* Add img? */}
+          <Image src={images.formFieldWithLabel} width="400px"></Image>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[16]}>
           <CodePane textSize=".8em">
@@ -247,95 +257,101 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[22]}>
-          <Text textColor="lightYellow" size={3}>
+          <Heading margin="0 0 25px 0" textColor="lightYellow" caps size={3}>
             Keep your labels short
-          </Text>
+          </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[23]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="bad" notes={slideNotes[23]}>
+          <Heading margin="0 0 25px 0" textColor="white" caps size={3}>
+            Don't write long labels
+          </Heading>
+          <Text textColor="white" size={3} lineHeight="1.5em">
             ‘Logout Button. Logout of account adam@gospelware.co.uk and return to homepage’
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[24]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="approved" notes={slideNotes[24]}>
+          <Heading margin="0 0 25px 0" textColor="tertiary" caps size={3}>
+            Keep labels short
+          </Heading>
+          <Text textColor="tertiary" size={3} lineHeight="1.5em">
             ‘Logout of adam@gospelware.co.uk’
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[25]}>
-          <Text textColor="lightYellow" size={3}>
-            Your labels should not describe the control type
-          </Text>
+          <Heading margin="0 0 25px 0" textColor="lightYellow" caps size={3}>
+            Your labels should not describe the control <em>type</em>
+          </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[26]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="bad" notes={slideNotes[26]}>
+          <Text textColor="white" size={3}>
             'Message Field.'
           </Text>
-          <Text margin="25px 0 0 0" textColor="lightYellow" size={3}>
+          <Text margin="25px 0 0 0" textColor="white" size={3}>
             'Settings Button.'
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[27]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="approved" notes={slideNotes[27]}>
+          <Text textColor="tertiary" size={3}>
             'Message.'
           </Text>
-          <Text margin="25px 0 0 0" textColor="lightYellow" size={3}>
+          <Text margin="25px 0 0 0" textColor="tertiary" size={3}>
             'Settings.'
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[28]}>
-          <Text textColor="lightYellow" size={3}>
-            Your labels should not describe the control state
-          </Text>
+          <Heading margin="0 0 25px 0" textColor="lightYellow" caps size={3}>
+            Your labels should not describe the control <em>state</em>
+          </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[29]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="bad" notes={slideNotes[29]}>
+          <Text textColor="white" size={3}>
             'Accept Terms and Conditions is selected'
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[30]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="approved" notes={slideNotes[30]}>
+          <Text textColor="tertiary" size={3} lineHeight="1.25em">
             'Accept Terms and Conditions'
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[31]}>
-          <Text textColor="lightYellow" size={3}>
+          <Heading margin="0 0 25px 0" textColor="lightYellow" caps size={3}>
             Describe what the element does
-          </Text>
+          </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[32]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="bad" notes={slideNotes[32]}>
+          <Text textColor="white" size={3}>
             'Burger menu icon.'
           </Text>
-          <Text margin="25px 0 0 0" textColor="lightYellow" size={3}>
+          <Text margin="25px 0 0 0" textColor="white" size={3}>
             'Pencil icon.'
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[33]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="approved" notes={slideNotes[33]}>
+          <Text textColor="tertiary" size={3}>
             'Show/hide navigation menu.'
           </Text>
-          <Text margin="25px 0 0 0" textColor="lightYellow" size={3}>
+          <Text margin="25px 0 0 0" textColor="tertiary" size={3}>
             'Edit text.'
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[34]}>
-          <Text textColor="lightYellow" size={3}>
+          <Heading margin="0 0 25px 0" textColor="lightYellow" caps size={3}>
             Do not discuss gesture or interaction, describe the task
-          </Text>
+          </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[35]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="bad" notes={slideNotes[35]}>
+          <Text textColor="white" size={3}>
             'Tap to speak'
           </Text>
-          <Text margin="25px 0 0 0" textColor="lightYellow" size={3}>
+          <Text margin="25px 0 0 0" textColor="white" size={3}>
             'Click to start'
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[36]}>
-          <Text textColor="lightYellow" size={3}>
+        <Slide transition={["slide"]} bgColor="approved" notes={slideNotes[36]}>
+          <Text textColor="tertiary" size={3}>
             'Voice search'
           </Text>
-          <Text margin="25px 0 0 0" textColor="lightYellow" size={3}>
+          <Text margin="25px 0 0 0" textColor="tertiary" size={3}>
             'Start game'
           </Text>
         </Slide>
@@ -354,7 +370,7 @@ export default class Presentation extends React.Component {
           </CodePane>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[39]}>
-          <CodePane textSize=".7em">
+          <CodePane textSize=".8em">
             {codeExamples.dialogs[1]}
           </CodePane>
         </Slide>
@@ -414,7 +430,8 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[48]}>
-          {/* Provide NCFE Example */}
+          <Image src={images.hiddenInfoUI} align="center" fit></Image>
+          <Image src={images.hiddenInfoCode} align="center" width="600px"></Image>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[49]}>
           <CodePane textSize=".6em">
@@ -446,14 +463,19 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[53]}>
-          <CodePane textSize=".6em">
+          <CodePane textSize=".6em" margin="0 0 25px 0">
             {codeExamples.styles[0]}
           </CodePane>
+          <Image src={images.buttonHover} margin="0 25px 25px 0" height="75px" fit align="center"></Image>
+          <Appear>
+            <Image src={images.buttonFocusNoStyle} margin="0 0 25px 0" height="75px" fit align="center"></Image>
+          </Appear>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[54]}>
-          <CodePane textSize=".6em">
+          <CodePane textSize=".6em" margin="0 0 25px 0">
             {codeExamples.styles[1]}
           </CodePane>
+          <Image src={images.buttonFocusWithStyle} margin="0 0 25px 0" width="400px"></Image>=
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary" notes={slideNotes[55]}>
           <CodePane textSize=".6em">
