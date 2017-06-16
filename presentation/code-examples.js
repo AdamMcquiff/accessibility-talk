@@ -1,8 +1,8 @@
 export default {
   labels: [
     `<a href="about-us.html">Read More</a>`,
-    `<a href="about-us.html" aria-label="Read More About The Team">Read More</a>`,
-    `<h1 id="title">Read More About The Team"</h1>
+    `<a href="about-us.html" aria-label="Read More About Cracking Open A Cold One">Read More</a>`,
+    `<h1 id="title">Read More About Cracking Open A Cold One"</h1>
 <a href="about-us.html" aria-labelledby="title">Read More</a>`,
     `<Button
     android:id="@+id/some_id"
@@ -29,11 +29,11 @@ messageField.accessibilityLabel = "Message…"`
   ],
   dialogs: [
     `<div>
-    The form has an error: you forgot to provide a message.
+    The form has an error: you forgot to provide a message ya daftie.
 </div>
 `,
     `<div role="alert">
-    The form has an error: you forgot to provide a message.
+    The form has an error: you forgot to provide a message ya daftie.
 </div>
 `
   ],
